@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Microsoft.Extensions.Options;
 
 namespace assist
 {
@@ -20,9 +21,16 @@ namespace assist
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
-        {
-            InitializeComponent();
-        }
+    private readonly ISampleService sampleService;
+    private readonly AppSettings settings;
+ 
+    public MainWindow(ISampleService sampleService, 
+                      IOptions<AppSettings> settings)
+    {
+        InitializeComponent();
+ 
+        this.sampleService = sampleService;
+        this.settings = settings.Value;
+    }
     }
 }

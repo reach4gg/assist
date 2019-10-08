@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\dev\\code\\assist\\assist.csproj": {}
+    "C:\\dev\\code\\assist\\src\\assist\\assist.csproj": {}
   },
   "projects": {
-    "C:\\dev\\code\\assist\\assist.csproj": {
+    "C:\\dev\\code\\assist\\src\\assist\\assist.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\dev\\code\\assist\\assist.csproj",
+        "projectUniqueName": "C:\\dev\\code\\assist\\src\\assist\\assist.csproj",
         "projectName": "assist",
-        "projectPath": "C:\\dev\\code\\assist\\assist.csproj",
+        "projectPath": "C:\\dev\\code\\assist\\src\\assist\\assist.csproj",
         "packagesPath": "C:\\Users\\home\\.nuget\\packages\\",
-        "outputPath": "C:\\dev\\code\\assist\\obj\\",
+        "outputPath": "C:\\dev\\code\\assist\\src\\assist\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\home\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -35,6 +35,20 @@
       },
       "frameworks": {
         "netcoreapp3.0": {
+          "dependencies": {
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Microsoft.Extensions.Options.ConfigurationExtensions": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
